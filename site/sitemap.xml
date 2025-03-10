@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/API%20Docs/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/blog/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/blog/2025/03/10/first-blog-post/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/blog/archive/2025/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.tomasmartinez.xyz/blog/category/life/</loc>
+         <lastmod>2025-03-10</lastmod>
+    </url>
+</urlset>
