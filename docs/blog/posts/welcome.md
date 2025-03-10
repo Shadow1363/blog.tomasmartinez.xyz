@@ -3,8 +3,8 @@ authors:
   - tomas
 categories:
   - Life
-tags:
-  - random
+# tags:
+#   - random
 date:
   created: 2025-03-10
 # updated: 2025-03-10
