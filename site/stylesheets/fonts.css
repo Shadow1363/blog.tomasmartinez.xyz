@@ -1,0 +1,28 @@
+/* * {
+	transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+@font-face {
+	font-family: "Merriweather Sans";
+	src: url("../assets/MerriweatherSans-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 100 900; /* Define full range of weights */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	src: url("../assets/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+	font-weight: 100 800; /* Define full range of weights */
+	font-style: normal;
+}
+
+body {
+	font-family: "Merriweather Sans", sans-serif;
+	font-weight: 400; /* Set a default weight */
+}
+
+code {
+	font-family: "JetBrains Mono", monospace;
+	font-weight: 400; /* Set a default weight */
+}

@@ -4,7 +4,7 @@ I'm Tomás Martinez and this is my blog/docs!
 
 Using Material for MkDocs, I write Markdown (.md) and it automatically creates a site for me.
 
-Huge shoutout to [James Willet](https://www.youtube.com/@james-willett) - I followed along with his videos to get the site started.
+Huge shoutout to [James Willet](https://www.youtube.com/playlist?list=PLw_jGKXm9lIaJCD8YClu6cAz1TcFdJdIf) - I followed along with his videos to get the site started.
 
 If you also want to take a peek under the hood, this site is on [GitHub](https://github.com/shadow1363/blog.tomasmartinez.xyz)!
 
