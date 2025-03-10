@@ -18,7 +18,7 @@ Ah yes, the purpose of this site. Well it comes down to three:
 A blog is just cool too, it's like my own social media site, just for me and I can do whatever I want.
 But I guess the real reason is I want to leave an impact in life. I want to create something, not just be a consumer.
 
-Unfortunately, it will all be in english. I tried setting up a multi lingual site but it would get too bloated, having to rewrite all my thoughts 3 times.
+Unfortunately, it will all be in english. I tried setting up a trilingual site but it would be too much work, having to rewrite all my thoughts 3 times.
 
 Anyways if you're here you probably want to check out out my blog or documentation.
 On the left side bar, there should be **API Docs** and **Blog**.
