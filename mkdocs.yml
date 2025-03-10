@@ -1,0 +1,69 @@
+site_name: Tomas Martinez Blog
+site_url: https://blog.tomasmartinez.xyz
+site_description: Tomas Martinez's Blog
+site_author: Tomás Martinez
+
+theme:
+  name: material
+  logo: assets/favicon.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.footer
+    - search.suggest
+    - search.share
+  font:
+    text: Merriweather Sans
+    code: JetBrains Mono
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: fontawesome/solid/moon
+        name: Dark mode
+      primary: blue
+      accent: cyan
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: fontawesome/solid/sun
+        name: Light mode
+      primary: blue
+      accent: cyan
+
+extra:
+  social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/shadow1363
+      - icon: fontawesome/brands/linkedin
+        link: https://linkedin.com/in/tomas--martinez
+      - icon: fontawesome/brands/imdb
+        link: https://www.imdb.com/name/nm15119198/
+  copyright: Copyright &copy; 2024 Tomás Martinez
+
+plugins:
+  - search
+  - blog:
+      post_readtime: true
+      blog_dir: blog
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      categories_allowed:
+        - Life
+        - Tech
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
