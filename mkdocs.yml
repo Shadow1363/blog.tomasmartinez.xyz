@@ -36,7 +36,7 @@ theme:
       accent: cyan
 
 extra_css:
-  - stylesheets/fonts.css
+  - stylesheets/styles.css
 
 extra_javascript:
   - javascripts/giscus-theme.js
@@ -70,6 +70,8 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

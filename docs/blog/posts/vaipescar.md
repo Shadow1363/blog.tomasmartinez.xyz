@@ -4,9 +4,9 @@ authors:
 categories:
   - Life
 tags:
-  - carta
-  - baralho
-  - jogo
+  - cards
+  - deck
+  - game
 date:
   created: 2025-03-12
   updated: 2025-03-12

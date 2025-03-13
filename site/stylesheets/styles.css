@@ -26,3 +26,12 @@ code {
 	font-family: "JetBrains Mono", monospace;
 	font-weight: 400; /* Set a default weight */
 }
+
+.md-post--excerpt {
+	background-color: var(--card-bg);
+	border-radius: 12px;
+	border: 1px solid var(--card-border);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	text-align: center;
+}

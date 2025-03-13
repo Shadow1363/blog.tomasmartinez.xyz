@@ -20,8 +20,8 @@ A blog is just cool too, it's like my own social media site, just for me, and I 
 
 But I guess the real reason is I want to leave an impact in life. I want to create something, not just be a consumer. And hey, if I just so happen to solve a very niche problem that someone later down the line uses, i'd consider this site a success.
 
-Unfortunately, it will all be in English. I tried setting up a trilingual site, but it would be too much work having to rewrite all my thoughts 3 times.
+Unfortunately, it will all *mostly* be in English. I tried setting up a trilingual site, but it would be too much work having to rewrite all my thoughts 3 times.
 
 Anyways, if you're here, you probably want to check out my blog or documentation.
 
-On the left sidebar, you should find **API Docs** and **Blog**.
+On the left sidebar, you should find **Docs** and **Blog**.
