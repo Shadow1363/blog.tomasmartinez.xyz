@@ -1,0 +1,1730 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tomas Martinez's Blog">
+      
+      
+        <meta name="author" content="Tomás Martinez">
+      
+      
+        <link rel="canonical" href="https://blog.tomasmartinez.xyz/blog/2025/08/16/unix-cheat-sheet/">
+      
+      
+        <link rel="prev" href="../../../04/06/best-tcgs/">
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Unix Cheat Sheet - Tomas Martinez Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unix-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Tomas Martinez Blog" class="md-header__button md-logo" aria-label="Tomas Martinez Blog" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tomas Martinez Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unix Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4s-8.6-18.3-18.5-20.5C294.4 2.2 275.4 0 256 0"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M178.2-10.1c7.4-3.1 15.8-2.2 22.5 2.2l87.8 58.2 87.8-58.2c6.7-4.4 15.1-5.2 22.5-2.2S411.4-.5 413 7.3l20.9 103.2 103.2 20.9c7.8 1.6 14.4 7 17.4 14.3s2.2 15.8-2.2 22.5L494.1 256l58.2 87.8c4.4 6.7 5.2 15.1 2.2 22.5s-9.6 12.8-17.4 14.3l-103.3 20.8L413 504.7c-1.6 7.8-7 14.4-14.3 17.4s-15.8 2.2-22.5-2.2l-87.8-58.2-87.8 58.2c-6.7 4.4-15.1 5.2-22.5 2.2s-12.8-9.6-14.3-17.4L143 401.4 39.7 380.5c-7.8-1.6-14.4-7-17.4-14.3s-2.2-15.8 2.2-22.5L82.7 256l-58.2-87.8c-4.4-6.7-5.2-15.1-2.2-22.5s9.6-12.8 17.4-14.3L143 110.6 163.9 7.3c1.6-7.8 7-14.4 14.3-17.4M207.6 256a80.4 80.4 0 1 1 160.8 0 80.4 80.4 0 1 1-160.8 0m208.8 0a128.4 128.4 0 1 0-256.8 0 128.4 128.4 0 1 0 256.8 0"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shadow1363/blog.tomasmartinez.xyz" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog.tomasmartinez.xyz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Tomas Martinez Blog" class="md-nav__button md-logo" aria-label="Tomas Martinez Blog" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.png" alt="logo">
+
+    </a>
+    Tomas Martinez Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shadow1363/blog.tomasmartinez.xyz" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog.tomasmartinez.xyz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Life
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tech
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good to know
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      sudo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      alias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      echo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      pwd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shred" class="md-nav__link">
+    <span class="md-ellipsis">
+      shred
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      cat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tails" class="md-nav__link">
+    <span class="md-ellipsis">
+      tails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      wall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      chmod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    <span class="md-ellipsis">
+      top
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      vi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      nano
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      htop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joke-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joke Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Joke Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#french-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      French Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-moo" class="md-nav__link">
+    <span class="md-ellipsis">
+      apt moo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/shadow1363.png" alt="Tomás Martinez">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://tomasmartinez.xyz">Tomás Martinez</a>
+                        
+                      </strong>
+                      <br>
+                      Named after the site
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-08-16 00:00:00+00:00" class="md-ellipsis">August 16, 2025</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2025-08-16 00:00:00+00:00" class="md-ellipsis">August 16, 2025</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/tech/">Tech</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">commands</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">guide</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">unix</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="unix-cheat-sheet">Unix Cheat Sheet</h1>
+<p>It's been a while since my last blog post! Apologies to any eager fan of my enticing blog.</p>
+<!-- more -->
+
+<p>I decided to jot down some handy commands, that I'm willing to bet a few you've never seen before, as cheat sheet for myself and any other person tinkering with Linux.</p>
+<p>Remember: always do your due diligence before running any commands. Never blindly trust a random stranger's advice on the internet… even me ;)</p>
+<p>Whether you loved it or hated it, be sure to leave a comment!</p>
+<hr />
+<ul>
+<li><a href="#unix-cheat-sheet">Unix Cheat Sheet</a></li>
+<li><a href="#file-permissions">File Permissions</a></li>
+<li><a href="#good-to-know">Good to know</a></li>
+<li><a href="#commands">Commands</a><ul>
+<li><a href="#help"><code>help</code></a></li>
+<li><a href="#cd"><code>cd</code></a></li>
+<li><a href="#tmux"><code>tmux</code></a></li>
+<li><a href="#sudo"><code>sudo</code></a></li>
+<li><a href="#ls"><code>ls</code></a></li>
+<li><a href="#clear"><code>clear</code></a></li>
+<li><a href="#alias"><code>alias</code></a></li>
+<li><a href="#echo"><code>echo</code></a></li>
+<li><a href="#touch"><code>touch</code></a></li>
+<li><a href="#pwd"><code>pwd</code></a></li>
+<li><a href="#mkdir"><code>mkdir</code></a></li>
+<li><a href="#rm"><code>rm</code></a></li>
+<li><a href="#shred"><code>shred</code></a></li>
+<li><a href="#cp"><code>cp</code></a></li>
+<li><a href="#mv"><code>mv</code></a></li>
+<li><a href="#cat"><code>cat</code></a></li>
+<li><a href="#grep"><code>grep</code></a></li>
+<li><a href="#head"><code>head</code></a></li>
+<li><a href="#tails"><code>tails</code></a></li>
+<li><a href="#wall"><code>wall</code></a></li>
+<li><a href="#chmod"><code>chmod</code></a></li>
+<li><a href="#sed"><code>sed</code></a></li>
+<li><a href="#awk"><code>awk</code></a></li>
+<li><a href="#set"><code>set</code></a></li>
+<li><a href="#top"><code>top</code></a></li>
+<li><a href="#find"><code>find</code></a></li>
+<li><a href="#vi"><code>vi</code></a></li>
+<li><a href="#nano"><code>nano</code></a></li>
+<li><a href="#htop"><code>htop</code></a></li>
+</ul>
+</li>
+<li><a href="#joke-commands">Joke Commands</a><ul>
+<li><a href="#french-language"><code>French Language</code></a></li>
+<li><a href="#apt-moo"><code>apt moo</code></a></li>
+<li><a href="#random-text"><code>Random Text</code></a></li>
+</ul>
+</li>
+<li><a href="#closing-thoughts">Closing Thoughts</a></li>
+</ul>
+<h2 id="file-permissions">File Permissions</h2>
+<p>• <strong>Permission Structure</strong>: Permissions are shown as 9 characters divided into 3 groups of 3: <code>rwxr-xr-x</code></p>
+<ul>
+<li>First group (rwx): Owner permissions</li>
+<li>Second group (r-x): Group permissions</li>
+<li>Third group (r-x): Other/world permissions</li>
+</ul>
+<p>• <strong>Permission Types</strong>: Each position represents a specific permission type:</p>
+<ul>
+<li><code>r</code> = read (4 in octal)</li>
+<li><code>w</code> = write (2 in octal)</li>
+<li><code>x</code> = execute (1 in octal)</li>
+<li><code>-</code> = permission not granted</li>
+</ul>
+<p>• <strong>rwxr-xr-x breakdown</strong> (755 in octal):</p>
+<ul>
+<li>Owner: <code>rwx</code> = read + write + execute (4+2+1 = 7)</li>
+<li>Group: <code>r-x</code> = read + execute only (4+0+1 = 5)</li>
+<li>Others: <code>r-x</code> = read + execute only (4+0+1 = 5)</li>
+</ul>
+<p>• <strong>700 permissions</strong> would be <code>rwx------</code>:</p>
+<ul>
+<li>Owner: <code>rwx</code> = read + write + execute (4+2+1 = 7)</li>
+<li>Group: <code>---</code> = no permissions (0+0+0 = 0)</li>
+<li>Others: <code>---</code> = no permissions (0+0+0 = 0)</li>
+</ul>
+<p>• <strong>For directories specifically</strong>:</p>
+<ul>
+<li><code>r</code> = can list directory contents</li>
+<li><code>w</code> = can create/delete files in directory</li>
+<li><code>x</code> = can enter/traverse the directory</li>
+</ul>
+<p>• <strong>Common permission patterns</strong>:</p>
+<ul>
+<li><code>755</code> (rwxr-xr-x): Standard for executables and directories</li>
+<li><code>644</code> (rw-r--r--): Standard for regular files</li>
+<li><code>700</code> (rwx------): Private directory (owner only)</li>
+<li><code>600</code> (rw-------): Private file (owner only)</li>
+</ul>
+<h2 id="good-to-know">Good to know</h2>
+<p>You can run multiple commands using `command</p>
+<h2 id="commands">Commands</h2>
+<p>If you have a Windows, use WSL.
+Once installed, if you have VSCodium I recommend using the <a href="https://github.com/jeanp413/open-remote-wsl">Open Remote - WSL</a> extension, it allows you to use WSL in your terminal. I wrote the whole blog with the terminal below, very handy!</p>
+<p>If you have Mac, figure it out.</p>
+<p>If you have Linux, nice one nerd.</p>
+<h3 id="help"><code>help</code></h3>
+<p>Get help. You can also add the flag <code>--help</code> to any command to see how it works</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">help</span>
+</span></code></pre></div>
+<p>GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally. Type <code>help</code> to see this list.
+Type <code>help name</code> to find out more about the function <code>name</code>.
+Use <code>info bash</code> to find out more about the shell in general.
+Use <code>man -k</code> or <code>info</code> to find out more about commands not in this list.</p>
+<hr />
+<h3 id="cd"><code>cd</code></h3>
+<p>Changes directory.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w">             </span><span class="c1"># goes all the way back</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>dir<span class="w">         </span><span class="c1"># changes directory to dir</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>parentDir/childDir<span class="w"> </span><span class="c1"># optimize your cd usage</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w">          </span><span class="c1"># go back one directory</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">cd</span><span class="w"> </span>-<span class="w">           </span><span class="c1"># undo previous cd, useful for accidental cd</span>
+</span></code></pre></div>
+<hr />
+<h3 id="tmux"><code>tmux</code></h3>
+<p>Modern terminal multiplexer (preferred over <code>screen</code>).</p>
+<p>Very useful for SSHing into your Minecraft server and able to disconnect and leave running.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tmux<span class="w">                     </span><span class="c1"># Start new session</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>mysession<span class="w">    </span><span class="c1"># Start named session</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Ctrl+B, then D to detach</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>tmux<span class="w"> </span>attach<span class="w">              </span><span class="c1"># Reattach to session</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tmux<span class="w"> </span>attach<span class="w"> </span>-t<span class="w"> </span>mysession<span class="w"> </span><span class="c1"># Reattach to specific session</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>tmux<span class="w"> </span>ls<span class="w">                  </span><span class="c1"># List all sessions</span>
+</span></code></pre></div>
+<hr />
+<h3 id="sudo"><code>sudo</code></h3>
+<p>Execute commands as another user (typically root). Allows authorized users to run commands with elevated privileges.</p>
+<p>It's not recommend to run commands using <code>sudo</code>, yes it saves you the hassle because of one pesky permission but you give the command all access you have. So with a root account it's pretty dangerous.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span><span class="nb">command</span>
+</span></code></pre></div>
+<p><strong>Common flags:</strong></p>
+<p>• <strong><code>-u USER</code></strong> - Run command as specified USER instead of root</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>touch<span class="w"> </span>/var/www/file.txt
+</span></code></pre></div>
+<p>• <strong><code>-g GROUP</code></strong> - Run command with specified GROUP as primary group</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>-g<span class="w"> </span>admin<span class="w"> </span>ls<span class="w"> </span>/private
+</span></code></pre></div>
+<p>• <strong><code>-i</code></strong> - Run login shell as target user (simulate login)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>-i<span class="w">    </span><span class="c1"># Become root with root&#39;s environment</span>
+</span></code></pre></div>
+<p>• <strong><code>-s</code></strong> - Run shell as target user</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>-s<span class="w">    </span><span class="c1"># Become root but keep current environment</span>
+</span></code></pre></div>
+<p>• <strong><code>-l</code></strong> - List allowed commands for current user</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>-l<span class="w">    </span><span class="c1"># Shows what you&#39;re allowed to run with sudo</span>
+</span></code></pre></div>
+<p>• <strong><code>-v</code></strong> - Validate/refresh timestamp without running command</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>-v<span class="w">    </span><span class="c1"># Extends sudo timeout without executing anything</span>
+</span></code></pre></div>
+<p>• <strong><code>-k</code></strong> - Invalidate timestamp (force password prompt next time)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>-k<span class="w">    </span><span class="c1"># Forces password prompt on next sudo usage</span>
+</span></code></pre></div>
+<p>• <strong><code>-n</code></strong> - Non-interactive mode (fail if password required)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>-n<span class="w"> </span><span class="nb">command</span><span class="w">    </span><span class="c1"># Fails silently if password needed</span>
+</span></code></pre></div>
+<p>• <strong><code>-S</code></strong> - Read password from stdin instead of terminal</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>-S<span class="w"> </span><span class="nb">command</span>
+</span></code></pre></div>
+<p>• <strong><code>-b</code></strong> - Run command in background</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>-b<span class="w"> </span>long-running-process
+</span></code></pre></div>
+<p>• <strong><code>-e FILE</code></strong> - Edit file (safer than <code>sudo vi</code>)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>-e<span class="w"> </span>/etc/hosts<span class="w">    </span><span class="c1"># Uses $EDITOR in secure environment</span>
+</span></code></pre></div>
+<p>• <strong><code>-H</code></strong> - Set HOME environment variable to target user's home</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>-H<span class="w"> </span>-u<span class="w"> </span>user<span class="w"> </span><span class="nb">command</span><span class="w">    </span><span class="c1"># Run as user with their $HOME</span>
+</span></code></pre></div>
+<p><strong>Examples:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w">                    </span><span class="c1"># Run as root</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w">             </span><span class="c1"># Run as postgres user</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>sudo<span class="w"> </span>-i<span class="w">                           </span><span class="c1"># Become root with login shell</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>sudo<span class="w"> </span>-l<span class="w">                           </span><span class="c1"># See what commands you can run</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>sudo<span class="w"> </span>!!<span class="w">                           </span><span class="c1"># Run previous command with sudo</span>
+</span></code></pre></div>
+<hr />
+<h3 id="ls"><code>ls</code></h3>
+<p>Lists directory contents.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ls<span class="w"> </span>-l<span class="w">       </span><span class="c1"># long format</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>ls<span class="w"> </span>-a<span class="w">       </span><span class="c1"># include hidden files</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>ls<span class="w"> </span>-lh<span class="w">      </span><span class="c1"># human-readable sizes</span>
+</span></code></pre></div>
+<hr />
+<h3 id="clear"><code>clear</code></h3>
+<p>Clear terminal.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>clear<span class="w">       </span><span class="c1"># Clears terminal</span>
+</span></code></pre></div>
+<hr />
+<h3 id="alias"><code>alias</code></h3>
+<p>Set aliases for commands, it can't handle position parameters, for that you have to use functions (which is not currently covered lmao).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">cls</span><span class="o">=</span><span class="s2">&quot;clear&quot;</span><span class="w">       </span><span class="c1"># cls will do the same as clear</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">alias</span><span class="w"> </span>-p<span class="w">                </span><span class="c1"># list all available aliases</span>
+</span></code></pre></div>
+<hr />
+<h3 id="echo"><code>echo</code></h3>
+<p>Print text or variables to terminal/files.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span><span class="w">   </span><span class="c1"># Prints Hello, World!</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w">    </span><span class="c1"># Prints /usr/local/...</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Creates the file (or overwrites if it exists)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Appends to file</span>
+</span></code></pre></div>
+<p>It can also be used in bash scripts:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Welcome, </span><span class="nv">$name</span><span class="s2">!&quot;</span><span class="w"> </span><span class="c1"># Prints Welcome, Alice!</span>
+</span></code></pre></div>
+<hr />
+<h3 id="touch"><code>touch</code></h3>
+<p>Create a file <code>touch filename.&lt;extension&gt;</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>touch<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Create file or update all timestamps</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>touch<span class="w"> </span>-a<span class="w"> </span>file.txt<span class="w">  </span><span class="c1"># Update only access time</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>touch<span class="w"> </span>-m<span class="w"> </span>file.txt<span class="w">  </span><span class="c1"># Update only modification time</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>touch<span class="w"> </span>-c<span class="w"> </span>file.txt<span class="w">  </span><span class="c1"># Don&#39;t create if doesn&#39;t exist</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>touch<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;last friday&quot;</span><span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Set time to last Friday</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>touch<span class="w"> </span>-r<span class="w"> </span>template.txt<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span><span class="c1"># Copy timestamps from template</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>touch<span class="w"> </span>-t<span class="w"> </span><span class="m">202601011200</span><span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Set to Jan 1, 2026, 12:00</span>
+</span></code></pre></div>
+<p>Full <a href="https://www.gnu.org/software/coreutils/touch">documentation</a></p>
+<hr />
+<h3 id="pwd"><code>pwd</code></h3>
+<p>Prints to the current working directory, with the flags <code>Logical</code> and <code>Physical</code>
+By default, <code>pwd</code> behaves as if <code>-L</code> were specified, if error it returns <code>0</code></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">pwd</span><span class="w"> </span><span class="c1"># Returns logical current directory path, in this case: /mnt/c/Users/tmartinez/Desktop/Vault/05 - Study/Site Reliability Engineer/WSL</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nb">pwd</span><span class="w"> </span>-L<span class="w"> </span><span class="c1"># Returns value of $PWD (Same as above)</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nb">pwd</span><span class="w"> </span>-P<span class="w"> </span><span class="c1"># Resolves all symbolic links (In this case, same as above)</span>
+</span></code></pre></div>
+<h3 id="mkdir"><code>mkdir</code></h3>
+<p>Creates directories, you can also use the <code>-m</code> (mode flag) to specify <a href="#file-permissions">file permissions</a>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>mkdir<span class="w"> </span>folder<span class="w"> </span><span class="c1"># Creates folder, if it doesn&#39;t already exist</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>mkdir<span class="w"> </span>-v<span class="w"> </span>folder<span class="w"> </span><span class="c1"># Outputs text if created/failed to create directory</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>parentFolder/childFolder<span class="w"> </span><span class="c1"># Creates parent child folders, if they don&#39;t already exist</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">755</span><span class="w"> </span>public_dir<span class="w"> </span><span class="c1"># rwxr-xr-x (owner: rwx, group: r-x, others: r-x)</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">700</span><span class="w"> </span>private_dir<span class="w"> </span><span class="c1"># rwx------ (owner: rwx, group: ---, others: ---)</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">775</span><span class="w"> </span>shared_dir<span class="w"> </span><span class="c1"># rwxrwxr-x (owner: rwx, group: rwx, others: r-x)</span>
+</span></code></pre></div>
+<h3 id="rm"><code>rm</code></h3>
+<p>Removes files/directories.</p>
+<p>By default, rm does not remove directories. Use the <code>--recursive</code>(<code>-r</code> or <code>-R</code>) option to remove each listed directory, too, along with all of its contents.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>rm<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Removes file</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>rm<span class="w"> </span>-f<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Force removable (--force also available)</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>rm<span class="w"> </span>-i<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Prompt before every removal</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>rm<span class="w"> </span>-r<span class="w"> </span>myFolder<span class="w"> </span><span class="c1"># Recursively deletes</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>rm<span class="w"> </span>-I<span class="w"> </span>-r<span class="w"> </span>myFolder<span class="w"> </span><span class="c1"># Less intrusive than -i but still offers prompting</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>rm<span class="w"> </span>-d<span class="w"> </span>myFolder<span class="w"> </span><span class="c1"># Removes empty directories</span>
+</span></code></pre></div>
+<p>To remove a file whose name starts with a '-', for example '-foo',
+use one of these commands:</p>
+<p><code>rm -- -foo</code></p>
+<p><code>rm ./-foo</code></p>
+<h3 id="shred"><code>shred</code></h3>
+<p>Note that if you use <code>rm</code> to remove a file, it might be possible to recover
+some of its contents, given sufficient expertise and/or time. For greater
+assurance that the contents are truly unrecoverable, consider using shred(1).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>shred<span class="w"> </span>-vfz<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>sensitive_file.txt<span class="w">    </span><span class="c1"># Overwrites 3 times, zeros out, verbose</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>shred<span class="w"> </span>-u<span class="w"> </span>sensitive_file.txt<span class="w">           </span><span class="c1"># Shred then remove</span>
+</span></code></pre></div>
+<h3 id="cp"><code>cp</code></h3>
+<p>Moves or renames files/directories.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>cp<span class="w"> </span>file.txt<span class="w"> </span>backup.txt<span class="w"> </span><span class="c1"># copies file under new name</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>cp<span class="w"> </span>-r<span class="w"> </span>dir1<span class="w"> </span>dir2<span class="w">   </span><span class="c1"># copy directories</span>
+</span></code></pre></div>
+<h3 id="mv"><code>mv</code></h3>
+<p>Moves or renames files/directories.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>mv<span class="w"> </span>file.txt<span class="w"> </span>/path/to/dest/file.txt<span class="w"> </span><span class="c1"># Moves to new dir, you can also change the name here</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>mv<span class="w"> </span>oldName.txt<span class="w"> </span>newName.txt<span class="w"> </span><span class="c1"># Renames</span>
+</span></code></pre></div>
+<h3 id="cat"><code>cat</code></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;model name&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="w"> </span><span class="c1"># Returns CPU</span>
+</span></code></pre></div>
+<h3 id="grep"><code>grep</code></h3>
+<p>Search for patterns in text files or outputs.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">              </span><span class="c1"># Search for pattern in file</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>/path/to/dir<span class="w">       </span><span class="c1"># Recursively search in directory</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Case-insensitive search</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Invert match (show lines that DON&#39;T match)</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Show line numbers</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Count matching lines</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>*.txt<span class="w">              </span><span class="c1"># List filenames that contain pattern</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>grep<span class="w"> </span>-A<span class="w"> </span><span class="m">3</span><span class="w"> </span>-B<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Show 3 lines after, 2 lines before match</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>grep<span class="w"> </span><span class="s2">&quot;^start&quot;</span><span class="w"> </span>file.txt<span class="w">               </span><span class="c1"># Lines starting with &quot;start&quot;</span>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>grep<span class="w"> </span><span class="s2">&quot;end</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt<span class="w">                 </span><span class="c1"># Lines ending with &quot;end&quot;</span>
+</span></code></pre></div>
+<h3 id="head"><code>head</code></h3>
+<p>Display the first x lines.
+Useful for combining with other commands, like <a href="#grep"><code>grep</code></a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>head<span class="w"> </span>file.txt<span class="w">                        </span><span class="c1"># Show first 10 lines (default)</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Show first 5 lines</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>head<span class="w"> </span>-5<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Shorthand for above</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>head<span class="w"> </span>-c<span class="w"> </span><span class="m">100</span><span class="w"> </span>file.txt<span class="w">                 </span><span class="c1"># Show first 100 characters</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>head<span class="w"> </span>-n<span class="w"> </span>-5<span class="w"> </span>file.txt<span class="w">                  </span><span class="c1"># Show all but last 5 lines</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>head<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w">             </span><span class="c1"># Show first lines of multiple files</span>
+</span></code></pre></div>
+<h3 id="tails"><code>tails</code></h3>
+<p>Display the last x lines.
+Useful for combining with other commands, like <a href="#grep"><code>grep</code></a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>tail<span class="w"> </span>file.txt<span class="w">                        </span><span class="c1"># Show last 10 lines (default)</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Show last 5 lines</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>tail<span class="w"> </span>-5<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Shorthand for above</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>tail<span class="w"> </span>-c<span class="w"> </span><span class="m">100</span><span class="w"> </span>file.txt<span class="w">                 </span><span class="c1"># Show last 100 characters</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>tail<span class="w"> </span>-f<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Follow file (show new lines as they&#39;re added)</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>tail<span class="w"> </span>-F<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Follow by name (handles log rotation)</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>tail<span class="w"> </span>-n<span class="w"> </span>+5<span class="w"> </span>file.txt<span class="w">                  </span><span class="c1"># Show from line 5 to end</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>tail<span class="w"> </span>--pid<span class="o">=</span><span class="m">1234</span><span class="w"> </span>-f<span class="w"> </span>file.txt<span class="w">          </span><span class="c1"># Follow until process 1234 terminates</span>
+</span></code></pre></div>
+<h3 id="wall"><code>wall</code></h3>
+<p>Send message to all logged-in users.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>wall<span class="w"> </span><span class="s2">&quot;System maintenance in 10 minutes&quot;</span><span class="w">     </span><span class="c1"># Broadcast message to all users</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Server reboot at 3 PM&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wall<span class="w">         </span><span class="c1"># Pipe message to wall</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>wall<span class="w"> </span>&lt;<span class="w"> </span>message.txt<span class="w">                          </span><span class="c1"># Send file contents to all users</span>
+</span></code></pre></div>
+<h3 id="chmod"><code>chmod</code></h3>
+<p>Changes <a href="#file-permissions">file permissions</a>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Set permissions using octal notation</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>script.sh<span class="w">                  </span><span class="c1"># Add execute permission for user (owner)</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>chmod<span class="w"> </span>g-w<span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Remove write permission for group</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>chmod<span class="w"> </span>o+r<span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Add read permission for others</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>chmod<span class="w"> </span>a+x<span class="w"> </span>script.sh<span class="w">                  </span><span class="c1"># Add execute for all (user, group, others)</span>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>chmod<span class="w"> </span><span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rx,o<span class="o">=</span>rx<span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># Set specific permissions for each group</span>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>chmod<span class="w"> </span>+x<span class="w"> </span>script.sh<span class="w">                   </span><span class="c1"># Add execute for everyone (shorthand)</span>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">644</span><span class="w"> </span>/path/to/dir<span class="w">            </span><span class="c1"># Recursively set permissions on directory</span>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>chmod<span class="w"> </span>--reference<span class="o">=</span>ref_file<span class="w"> </span>target<span class="w">    </span><span class="c1"># Copy permissions from ref_file to target</span>
+</span></code></pre></div>
+<p><strong>Permission symbols:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>u = user/owner, g = group, o = others, a = all
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>+ = add permission, - = remove permission, = = set exact permission
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>r = read (4), w = write (2), x = execute (1)
+</span></code></pre></div>
+<p>Here are the additional commands to complete your reference:</p>
+<h3 id="sed"><code>sed</code></h3>
+<p>Stream editor for filtering and transforming text.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/old/new/&#39;</span><span class="w"> </span>file.txt<span class="w">            </span><span class="c1"># Replace first occurrence of &quot;old&quot; with &quot;new&quot; per line</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>sed<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Replace all occurrences globally</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>sed<span class="w"> </span><span class="s1">&#39;s/old/new/gi&#39;</span><span class="w"> </span>file.txt<span class="w">          </span><span class="c1"># Global + case insensitive</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Edit file in-place</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Edit in-place with backup</span>
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>sed<span class="w"> </span><span class="s1">&#39;2d&#39;</span><span class="w"> </span>file.txt<span class="w">                    </span><span class="c1"># Delete line 2</span>
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>sed<span class="w"> </span><span class="s1">&#39;1,3d&#39;</span><span class="w"> </span>file.txt<span class="w">                  </span><span class="c1"># Delete lines 1-3</span>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;5,10p&#39;</span><span class="w"> </span>file.txt<span class="w">              </span><span class="c1"># Print only lines 5-10</span>
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>sed<span class="w"> </span><span class="s1">&#39;/pattern/d&#39;</span><span class="w"> </span>file.txt<span class="w">            </span><span class="c1"># Delete lines containing pattern</span>
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>sed<span class="w"> </span><span class="s1">&#39;s/^/&gt; /&#39;</span><span class="w"> </span>file.txt<span class="w">               </span><span class="c1"># Add &quot;&gt; &quot; to beginning of each line</span>
+</span></code></pre></div>
+<h3 id="awk"><code>awk</code></h3>
+<p>Pattern scanning and processing language.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>file.txt<span class="w">            </span><span class="c1"># Print first field/column</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>awk<span class="w"> </span><span class="s1">&#39;{print $NF}&#39;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Print last field</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>awk<span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Print first and third fields</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>awk<span class="w"> </span>-F:<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>/etc/passwd<span class="w">     </span><span class="c1"># Use colon as field separator</span>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>awk<span class="w"> </span><span class="s1">&#39;NR==5&#39;</span><span class="w"> </span>file.txt<span class="w">                 </span><span class="c1"># Print line 5</span>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>awk<span class="w"> </span><span class="s1">&#39;length &gt; 80&#39;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Print lines longer than 80 characters</span>
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>awk<span class="w"> </span><span class="s1">&#39;/pattern/ {print $2}&#39;</span><span class="w"> </span>file.txt<span class="w">  </span><span class="c1"># Print second field of lines matching pattern</span>
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>awk<span class="w"> </span><span class="s1">&#39;{sum += $1} END {print sum}&#39;</span><span class="w">    </span><span class="c1"># Sum first column</span>
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>awk<span class="w"> </span><span class="s1">&#39;{print NR, $0}&#39;</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Add line numbers</span>
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1, $2, $11}&#39;</span><span class="w">   </span><span class="c1"># Print user, PID, and command from ps</span>
+</span></code></pre></div>
+<h3 id="set"><code>set</code></h3>
+<p>Enable debugging mode in bash scripts.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nb">set</span><span class="w"> </span>-x<span class="w">                               </span><span class="c1"># Turn on debug mode (shows commands being executed)</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nb">set</span><span class="w"> </span>+x<span class="w">                               </span><span class="c1"># Turn off debug mode</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="nb">set</span><span class="w"> </span>-e<span class="w">                               </span><span class="c1"># Exit on any error</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="nb">set</span><span class="w"> </span>-u<span class="w">                               </span><span class="c1"># Exit on undefined variables</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="nb">set</span><span class="w"> </span>-euo<span class="w"> </span>pipefail<span class="w">                    </span><span class="c1"># Strict mode (exit on error, undefined vars, pipe failures)</span>
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="c1"># In scripts:</span>
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="c1">#!/bin/bash</span>
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="nb">set</span><span class="w"> </span>-x<span class="w">                               </span><span class="c1"># Debug entire script</span>
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="c1"># ... script content ...</span>
+</span></code></pre></div>
+<h3 id="top"><code>top</code></h3>
+<p>Display running processes dynamically.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>top<span class="w">                                  </span><span class="c1"># Interactive process viewer</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>top<span class="w"> </span>-u<span class="w"> </span>username<span class="w">                      </span><span class="c1"># Show processes for specific user</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>top<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">                          </span><span class="c1"># Monitor specific PID</span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>top<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w">                             </span><span class="c1"># Run once and exit (non-interactive)</span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>top<span class="w"> </span>-b<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w">                          </span><span class="c1"># Batch mode (good for scripts)</span>
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>top<span class="w"> </span>-o<span class="w"> </span>%CPU<span class="w">                          </span><span class="c1"># Sort by CPU usage</span>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>top<span class="w"> </span>-o<span class="w"> </span>%MEM<span class="w">                          </span><span class="c1"># Sort by memory usage</span>
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="c1"># Interactive keys while top is running:</span>
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="c1"># q = quit, k = kill process, r = renice, h = help</span>
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="c1"># 1 = show individual CPU cores, M = sort by memory</span>
+</span></code></pre></div>
+<h3 id="find"><code>find</code></h3>
+<p>Search for files and directories.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>find<span class="w"> </span>/path<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;filename&quot;</span><span class="w">          </span><span class="c1"># Find by exact name</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w">                 </span><span class="c1"># Find all .txt files in current dir and children</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>find<span class="w"> </span>/home<span class="w"> </span>-user<span class="w"> </span>john<span class="w">                </span><span class="c1"># Find files owned by user john</span>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w">                       </span><span class="c1"># Find only files (not directories)</span>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w">                       </span><span class="c1"># Find only directories</span>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+100M<span class="w">                   </span><span class="c1"># Find files larger than 100MB</span>
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>-7<span class="w">                     </span><span class="c1"># Find files modified in last 7 days</span>
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-delete<span class="w">         </span><span class="c1"># Find and delete .log files</span>
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.sh&quot;</span><span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w">  </span><span class="c1"># Find .sh files and make executable</span>
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>find<span class="w"> </span>/var/log<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>+30<span class="w"> </span>-delete<span class="w">  </span><span class="c1"># Delete logs older than 30 days</span>
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>find<span class="w"> </span>.<span class="w"> </span>-empty<span class="w">                        </span><span class="c1"># Find empty files and directories</span>
+</span></code></pre></div>
+<h3 id="vi"><code>vi</code></h3>
+<p>Another text editor.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>vi<span class="w"> </span>file.txt<span class="w">                          </span><span class="c1"># Open file in vi</span>
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="c1"># Basic vi commands (press ESC first to ensure command mode):</span>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="c1"># i = insert mode, a = append, o = new line below</span>
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="c1"># :w = save, :q = quit, :wq = save and quit, :q! = quit without saving</span>
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="c1"># dd = delete line, yy = copy line, p = paste</span>
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="c1"># /pattern = search forward, ?pattern = search backward</span>
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="c1"># u = undo, Ctrl+r = redo</span>
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="c1"># :set number = show line numbers</span>
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="c1"># :syntax on = enable syntax highlighting</span>
+</span></code></pre></div>
+<h3 id="nano"><code>nano</code></h3>
+<p>Simple, user-friendly text editor.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>nano<span class="w"> </span>file.txt<span class="w">                        </span><span class="c1"># Open file in nano</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>nano<span class="w"> </span>+25<span class="w"> </span>file.txt<span class="w">                    </span><span class="c1"># Open file and go to line 25</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>nano<span class="w"> </span>-w<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Disable line wrapping</span>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>nano<span class="w"> </span>-B<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Create backup of original file</span>
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>nano<span class="w"> </span>-T<span class="w"> </span><span class="m">4</span><span class="w"> </span>file.txt<span class="w">                   </span><span class="c1"># Set tab width to 4 spaces</span>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>nano<span class="w"> </span>-l<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Show line numbers</span>
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>nano<span class="w"> </span>-m<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Enable mouse support</span>
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>nano<span class="w"> </span>-S<span class="w"> </span>file.txt<span class="w">                     </span><span class="c1"># Enable smooth scrolling</span>
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="c1"># Key shortcuts (shown at bottom of nano):</span>
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="c1"># Ctrl+X = exit, Ctrl+O = save (WriteOut), Ctrl+R = read file</span>
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="c1"># Ctrl+W = search (Where Is), Ctrl+\ = find and replace</span>
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="c1"># Ctrl+G = help, Ctrl+K = cut line, Ctrl+U = paste (uncut)</span>
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a><span class="c1"># Ctrl+C = show cursor position, Ctrl+T = spell check</span>
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a><span class="c1"># Alt+U = undo, Alt+E = redo</span>
+</span><span id="__span-42-16"><a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a><span class="c1"># Ctrl+A = beginning of line, Ctrl+E = end of line</span>
+</span><span id="__span-42-17"><a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a><span class="c1"># Ctrl+Y = previous page, Ctrl+V = next page</span>
+</span></code></pre></div>
+<p><strong>Nano vs Vi comparison:</strong></p>
+<ul>
+<li><strong>nano</strong>: Beginner-friendly, shortcuts shown on screen, works like modern editors</li>
+<li><strong>vi/vim</strong>: More powerful but steeper learning curve, modal editing, extensive features</li>
+</ul>
+<p>Nano is often the default editor for beginners since it displays its shortcuts at the bottom and behaves more like familiar text editors.</p>
+<h3 id="htop"><code>htop</code></h3>
+<p>Enhanced version of top (if installed).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>htop<span class="w">                                 </span><span class="c1"># Interactive process viewer with better UI</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>htop<span class="w"> </span>-u<span class="w"> </span>username<span class="w">                     </span><span class="c1"># Show processes for specific user</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>htop<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span>,5678<span class="w">                    </span><span class="c1"># Monitor specific PIDs</span>
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="c1"># Interactive keys:</span>
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="c1"># F1 = help, F2 = setup, F3 = search, F4 = filter</span>
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="c1"># F5 = tree view, F6 = sort options, F9 = kill, F10 = quit</span>
+</span></code></pre></div>
+<h2 id="joke-commands">Joke Commands</h2>
+<p>Here is a collection of joke commands</p>
+<p>Some have to be installed separately <code>sudo apt install cowsay fortune sl figlet</code> if you're on ubuntu (no fun).</p>
+<h3 id="french-language"><code>French Language</code></h3>
+<details>
+<summary>All Ubuntu installations come bundled in with a French Language pack, this uses completely unnecessary storage. With one simple command, you can remove it and save 243mb!</summary>
+If you got this far hopefully you haven't fallen for it.
+The other ones are safe I promise ;)
+</details>
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-fr<span class="w"> </span>./*<span class="w"> </span><span class="c1"># No more pointless french language!</span>
+</span></code></pre></div>
+<h3 id="apt-moo"><code>apt moo</code></h3>
+<p>Have you mooed today?</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>apt<span class="w"> </span>moo<span class="w"> </span><span class="sb">```</span>
+</span></code></pre></div>
+<h3 id="random-text"><code>Random Text</code></h3>
+<p>Ever wondered how you could repeatedly spam useless text forever?</p>
+<p>wonder no more!</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>yes<span class="w"> </span><span class="c1"># Prints &quot;y&quot; forever</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>yes<span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="c1"># Prints string forever</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>cat<span class="w"> </span>/dev/urandom<span class="w"> </span><span class="c1"># Gets alien language for you to decipher</span>
+</span></code></pre></div>
+<p>Make sure to use <code>Ctrl+C</code> to stop it!</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>Unlike my regular blog posts, do expect me to come back to this! I plan on continually improving this. If you made it until here, thanks for reading and hopefully this useful!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+<script
+  src="https://giscus.app/client.js"
+  data-repo="shadow1363/blog.tomasmartinez.xyz"
+  data-repo-id="R_kgDOOF8EUw"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOOF8EU84CnxJq"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../04/06/best-tcgs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Best TCGs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Best TCGs
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/shadow1363" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/tomas--martinez" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.imdb.com/name/nm15119198/" target="_blank" rel="noopener" title="www.imdb.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M89.5 323.6H53.9V186.2h35.6zm66.6-73.1 9.1-64.3h46.3v137.4h-31v-92.7l-13.4 92.7h-21.3l-13-90.7-.1 90.7h-31.2V186.2h46.1c.5 8.3 2.8 18.1 4.3 29.4zm67.6 73.1V186.2h26.6c17 0 27 .9 33 2.4 6.1 1.7 10.7 4.2 13.9 7.9 3.1 3.3 5.1 6.6 5.8 12 .9 4.4 1.4 13.1 1.4 26.2v48.2c0 12.3-.7 20.5-1.9 24.7-1.1 4.1-3.1 7.4-6 9.7-2.8 2.4-6.4 4.1-10.7 5-4.2.8-10.6 1.3-19.1 1.3zm35.5-113.9v89.4c5.1 0 8.3-1 9.4-2.3 1.1-2 1.8-7.6 1.8-16.7v-53.3c0-6.2-.1-10.2-.7-12-.3-1.8-1.2-3-2.6-4.7-1.4 0-4.1-.4-7.9-.4m57.3 113.9V186.2h34.1v43.9c2.9-2.4 6.1-4.9 9.5-6.6 3.6-1.5 8.8-2.4 12.8-2.4 4.8 0 8.9.8 12.3 2.2 3.4 1.5 6 3.5 8 6.2 1.7 2.6 2.7 5.3 3.1 7.8.4 2.6-.2 8-.2 16.2v38.6c0 8.2.2 14.3-.8 18.4-1.1 4-3.8 7.6-7.8 9.6-4.1 3.9-8.9 5.3-14.6 5.3-4 0-9.2-.9-12.7-2.5-3.5-1.8-6.7-4.5-9.6-8l-2.1 8.7zm45.1-20.7c.7-1.8 1-6 1-12.5V255c0-5.6-.3-9.5-1.1-11.2-.7-1.9-3.7-2.7-5.8-2.7-2 0-3.4.8-4.1 2.3-.6 1.5-1 5.4-1 11.6v36.4c0 6.1.4 10 1.2 11.6.6 1.7 2.1 2.5 4.1 2.5 2.2 0 4.2-.8 5.7-2.6M418.4 32c15.7 1.2 28.7 15.2 28.7 31.9v384.2c0 16.4-11.9 30.4-28.2 31-.3 0-.5.9-.8.9H29.9c-.3 0-.6-.9-.8-.1-15.7-1.4-27.9-13.8-29-30.2L0 61.8c1.1-15.9 13.8-28.7 30.3-30.7h387.4c.2 0 .5.9.7.9M30.3 41.3C19 42 10 51 9.3 62.4v387.3c.4 5.4 2.7 10.5 6.4 14.3 3.8 3.9 8.8 6.3 14.2 6.7h388.2c11.5-1 20.6-11.6 20.6-22.6V63.9c0-5.7-2.1-11.3-6-15.5s-9.3-6.8-15-7.2H30.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.share"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../../javascripts/giscus-theme.js"></script>
+      
+    
+  </body>
+</html>
