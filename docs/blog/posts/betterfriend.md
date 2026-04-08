@@ -33,7 +33,7 @@ LIKE LOOK AT THIS, SHE MADE ME THIS FOR MY BIRTHDAY and what did I get her?
 
 Nothing. I forgot 💀
 
-Yeah I wasn't joking in the [confession](https://linkedin link)
+<!-- Yeah I wasn't joking in the [confession](https://linkedin link) -->
 
 So originally I started using an Obsidian Template (Which didn't work anymore since I moved to VS Codium) and plain old `.md` files. It worked but it was stuck to my pc, it didn't have the portability. It also depends on me checking my notes, I thought why couldn't it just have been automatic, I get a notification when my friend's birthday is near?
 
