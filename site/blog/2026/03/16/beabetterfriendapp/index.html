@@ -855,6 +855,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#platform-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform differences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#the-other-stuff" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1045,11 +1056,12 @@
 <li>CSS</li>
 <li>JS</li>
 <li>Capacitor</li>
-<li>SQLite3</li>
+<li>SQLite</li>
 </ul>
 <p>Yup all plain, no frameworks or anything fancy.
 Should have definitely used one...</p>
-<p>If I made the app in one day, sure but oh boy maintaining pure JS is really something.</p>
+<p>If I made the app in one day, sure.</p>
+<p>but oh boy maintaining pure JS is really something.</p>
 <h3 id="the-logo">The Logo</h3>
 <p>As I was making the app, I got the name Better Friend. Kinda on point but after searching and seeing no apps with that name and some domains free'd up for it, I thought why not?</p>
 <p>As for the logo I always had an idea of what I wanted it to be, like a clover, or a group of friend's hugging. And purple, I don't really know how to explain it but the logo and color, I was already dead set on what I wanted. Purple felt like a really neutral color and new, didn't want to step on other apps toes (youtube red, amazon prime blue, etc)</p>
@@ -1095,15 +1107,18 @@ Then for curiosity I checked the Magalu store again, to see if it was still in s
 <h3 id="file-loading">File loading</h3>
 <p>So for some reason the way files are loaded is pretty weird in Capacitor, not sure if it's just for it or all apps. But basically the issue is that trying to load a file after the app is running, a <code>.json</code> or <code>.svg</code>. The path would be wrong so what was the solution? Just make all the files <code>.js</code> and preload them.</p>
 <p>Yeah I don't know if it's "optimal" but hey it works, really simple solution.</p>
+<h3 id="platform-differences">Platform differences</h3>
+<p>Funnily enough I still had to account for platform differences, Apple handles permissions a little differently and for some reason on their simulator camera's don't work, so I made it instead work on just gallery. Then there was the floating island too, the little notch so my genius solution was padding of 10px.</p>
 <h3 id="the-other-stuff">The other stuff</h3>
 <p>Making an App is half the battle, what about the designs, marketing and videos? I could make a ok video but nothing too crazy, luckily one of my friends was down to help me in video editing. It was a little rough the first time, but learning from it and experiences from my work, I think the next few videos will come out better.</p>
 <p>As for graphics, it was my Mom again that helped me &amp; Mockuuups Studio, I gave her a few examples of what I had and she made some great work. I really like how the last image of the app on the stores, it's just people because that's what the app is, it's a helper not a replacement. The gradient was a nice touch too.</p>
 <p><img alt="really cool image of showing friends instead of app photos" src="../../../../image/betterfriend/iPad5.png" /></p>
 <h2 id="retrospective">Retrospective</h2>
-<p>Definitely embarrassed with how long it took me to get this out, almost a full year for a simple offline app (ffs) but i'm still quite happy for the journey, all the ups and downs. How much I grew coding wise, Glad I managed to release the app before apple charged me another year too, yikes I get it why every extension is paid now on macOS.</p>
-<p>Overall a lot of money was spent, I rather not think about it 😭 but hey at least I can brag i'm an app developer.</p>
+<p>Definitely embarrassed with how long it took me to get this out, almost a full year for a simple offline app (ffs) but i'm still quite happy for the journey, all the ups and downs. How much I grew coding wise, Glad I managed to release the app before apple charged me another year too, (yikes) I get it why every extension is paid now on macOS.</p>
+<p>Overall a lot of money was spent, I rather not think about it 😭 but hey at least I can brag i'm an app developer now.</p>
 <h2 id="the-future">The Future</h2>
 <p>I do want to keep updating the app, already got some bugs that need ironing out &amp; features to add.</p>
+<p>Do check it out here, <a href="https://beabetterfriend.app">https://beabetterfriend.app</a>, I still need a couple more testers for android to publish.</p>
 <p>Oh yeah and WIDGETS! LIKE HOW DID I NOT THINK ABOUT THIS EARLIER FUC-</p>
 
 

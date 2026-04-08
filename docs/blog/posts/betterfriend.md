@@ -49,12 +49,14 @@ So yeah the tech stack is:
 - CSS
 - JS
 - Capacitor
-- SQLite3
+- SQLite
 
 Yup all plain, no frameworks or anything fancy.
 Should have definitely used one...
 
-If I made the app in one day, sure but oh boy maintaining pure JS is really something.
+If I made the app in one day, sure.
+
+but oh boy maintaining pure JS is really something.
 
 ### The Logo
 
@@ -139,6 +141,10 @@ So for some reason the way files are loaded is pretty weird in Capacitor, not su
 
 Yeah I don't know if it's "optimal" but hey it works, really simple solution.
 
+### Platform differences
+
+Funnily enough I still had to account for platform differences, Apple handles permissions a little differently and for some reason on their simulator camera's don't work, so I made it instead work on just gallery. Then there was the floating island too, the little notch so my genius solution was padding of 10px.
+
 ### The other stuff
 
 Making an App is half the battle, what about the designs, marketing and videos? I could make a ok video but nothing too crazy, luckily one of my friends was down to help me in video editing. It was a little rough the first time, but learning from it and experiences from my work, I think the next few videos will come out better.
@@ -149,12 +155,14 @@ As for graphics, it was my Mom again that helped me & Mockuuups Studio, I gave h
 
 ## Retrospective
 
-Definitely embarrassed with how long it took me to get this out, almost a full year for a simple offline app (ffs) but i'm still quite happy for the journey, all the ups and downs. How much I grew coding wise, Glad I managed to release the app before apple charged me another year too, yikes I get it why every extension is paid now on macOS.
+Definitely embarrassed with how long it took me to get this out, almost a full year for a simple offline app (ffs) but i'm still quite happy for the journey, all the ups and downs. How much I grew coding wise, Glad I managed to release the app before apple charged me another year too, (yikes) I get it why every extension is paid now on macOS.
 
-Overall a lot of money was spent, I rather not think about it 😭 but hey at least I can brag i'm an app developer.
+Overall a lot of money was spent, I rather not think about it 😭 but hey at least I can brag i'm an app developer now.
 
 ## The Future
 
 I do want to keep updating the app, already got some bugs that need ironing out & features to add.
+
+Do check it out here, [https://beabetterfriend.app](https://beabetterfriend.app), I still need a couple more testers for android to publish.
 
 Oh yeah and WIDGETS! LIKE HOW DID I NOT THINK ABOUT THIS EARLIER FUC-
