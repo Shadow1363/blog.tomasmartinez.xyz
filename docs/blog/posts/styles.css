@@ -1,0 +1,37 @@
+/* * {
+	transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+@font-face {
+  font-family: "Merriweather Sans";
+  src: url("../assets/MerriweatherSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900; /* Define full range of weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 800; /* Define full range of weights */
+  font-style: normal;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400; /* Set a default weight */
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400; /* Set a default weight */
+}
+
+.md-post--excerpt {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}

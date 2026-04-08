@@ -25,13 +25,13 @@ My goal here is to try and pinpoint what I loved (and disliked) about all the ca
 
 # Magic The Gathering
 
-Classic—the gold standard for card games. To be honest, it's the most fun card game I've played, but there are a few flaws. Even though I may be harsh on it, it's still my favorite on the list; think of it as tough love.
+Classic,the gold standard for card games. To be honest, it's the most fun card game I've played, but there are a few flaws. Even though I may be harsh on it, it's still my favorite on the list; think of it as tough love.
 
 ## Pros
 
 ### Fun
 
-The game is just fun and offers so much room to create the exact playstyle you want. The whole stack and instant-speed spells make this game great. I love the "in response to" mechanic—it feels like you're really wizarding. 
+The game is just fun and offers so much room to create the exact playstyle you want. The whole stack and instant-speed spells make this game great. I love the "in response to" mechanic,it feels like you're really wizarding.
 
 ### Modular
 
@@ -43,17 +43,17 @@ The game allows you to mix colors instead of limiting yourself to just one. Want
 
 ### Abilities
 
-Being around the longest means it has far more abilities than other card games. Kicker, morph, buyback—they are all great modifications.
+Being around the longest means it has far more abilities than other card games. Kicker, morph, buyback,they are all great modifications.
 
 ## Cons
 
 ### Expensive
 
-It's literally cardboard. Why are Commander staples or must-have cards over $5? I could understand variant card arts—there's gotta be some scarcity, and you can always opt for the cheaper (not as pretty) alternative. But really? Even some must-have cards set you back anywhere from $5 to $20. Imagine building a deck of 100 cards from scratch. Even the Commander decks aren’t cheap, especially here in Brasil: 300 to 500 BRL for one pre-built deck is insane.
+It's literally cardboard. Why are Commander staples or must-have cards over $5? I could understand variant card arts,there's gotta be some scarcity, and you can always opt for the cheaper (not as pretty) alternative. But really? Even some must-have cards set you back anywhere from $5 to $20. Imagine building a deck of 100 cards from scratch. Even the Commander decks aren’t cheap, especially here in Brasil: 300 to 500 BRL for one pre-built deck is insane.
 
 ### Design
 
-I like the iconic Magic design, but it's not practical. Grab a hand of Magic cards and fan them out—you have no idea what the cost or stats of your cards are. It’s understandable why; as one of the first TCGs, the optimal layout wasn’t planned out yet. And when Magic did try a layout change in one set, it didn’t stick. I don't think this is a problem that can ever be fixed.
+I like the iconic Magic design, but it's not practical. Grab a hand of Magic cards and fan them out,you have no idea what the cost or stats of your cards are. It’s understandable why; as one of the first TCGs, the optimal layout wasn’t planned out yet. And when Magic did try a layout change in one set, it didn’t stick. I don't think this is a problem that can ever be fixed.
 
 ### Lands
 
@@ -63,30 +63,30 @@ This isn’t a problem exclusive to Magic, but lands have some caveats that I’
 
 ### Complex
 
-Magic is like riding a bike—once you learn it, you can always jump back in with a few pointers. The main problem is that not a lot of people are willing to overcome that initial difficulty, and Magic hasn’t been getting easier. With card effects that aren’t written on the card, external effects (like Start Your Engines, Dungeons, Day/Night, ~~Monarch~~ scratch that—I like Monarch), it’s not easy to get a complete beginner into it. But once you do, oh boy, that's where the fun begins.
+Magic is like riding a bike,once you learn it, you can always jump back in with a few pointers. The main problem is that not a lot of people are willing to overcome that initial difficulty, and Magic hasn’t been getting easier. With card effects that aren’t written on the card, external effects (like Start Your Engines, Dungeons, Day/Night, ~~Monarch~~ scratch that,I like Monarch), it’s not easy to get a complete beginner into it. But once you do, oh boy, that's where the fun begins.
 
 # Buddy Fight
 
-Man, I miss Buddy Fight. It was a card game from 2014 to 2020. It was peak—complete with a killer anime, not as expensive, and much easier to understand the rules. It's also the only tournament I ever played in. I remember there was a camera filming when I was getting my ass beat, lmao. It was a good time. But it did have some faults; let’s start with the good news first!
+Man, I miss Buddy Fight. It was a card game from 2014 to 2020. It was peak,complete with a killer anime, not as expensive, and much easier to understand the rules. It's also the only tournament I ever played in. I remember there was a camera filming when I was getting my ass beat, lmao. It was a good time. But it did have some faults; let’s start with the good news first!
 
 ## Pros
 
 ### Atmosphere
 
-In the anime, before every battle, they would shout, "RAISE THE FLAG, DRAGON WORLD!" or "MY BUDDY IS DRUM BUNKER DRAGON!"—genuinely the coolest. The anime hyped it up, and you also had items like swords you could equip, which then fought for you. Dude, it was mad cool.
+In the anime, before every battle, they would shout, "RAISE THE FLAG, DRAGON WORLD!" or "MY BUDDY IS DRUM BUNKER DRAGON!",genuinely the coolest. The anime hyped it up, and you also had items like swords you could equip, which then fought for you. Dude, it was mad cool.
 
 ### Gauge
 
-The gauge mechanic is near perfect—it solves the problem of lands, energy, or their equivalent. The solution? Any card can serve as land/energy.  
+The gauge mechanic is near perfect,it solves the problem of lands, energy, or their equivalent. The solution? Any card can serve as land/energy.  
 How does it work? You draw six cards, then put the next two cards face down in a pile. That’s your gauge. Some monsters and spells cost gauge. If a monster says, "pay 1 gauge," you just take a card from the gauge and move it to your dropzone, graveyard, or discard pile.
 
 **How do you get gauge?**  
-Every turn you draw, and optionally, you can charge and draw—putting a card from your hand into the pile while drawing a new card. It's that simple. There are cards that help you get gauge, but for the most part, everyone has gauge. With a house rule variation (draw 8 cards, then pick 2 to put into the gauge), it adds another layer of gameplay. I love it—it's like gambling every turn. You get a lot of card advantage, and it means all 50 cards are useful in some capacity.
+Every turn you draw, and optionally, you can charge and draw,putting a card from your hand into the pile while drawing a new card. It's that simple. There are cards that help you get gauge, but for the most part, everyone has gauge. With a house rule variation (draw 8 cards, then pick 2 to put into the gauge), it adds another layer of gameplay. I love it,it's like gambling every turn. You get a lot of card advantage, and it means all 50 cards are useful in some capacity.
 
-Throwing a card into the gauge is essentially discarding it, so you have to pick wisely. The big monster might not be useful now, but it could be in a few turns—do I keep it or throw it away? Do I spend all of my 4 gauge on this one play, risking starting over from 0 gauge if it fails?
+Throwing a card into the gauge is essentially discarding it, so you have to pick wisely. The big monster might not be useful now, but it could be in a few turns,do I keep it or throw it away? Do I spend all of my 4 gauge on this one play, risking starting over from 0 gauge if it fails?
 
 Now you might think, "What’s stopping me from filling my board with expensive gauge creatures?" Eventually, I would just get an edge since gauge comes back at a more or less fixed rate.  
-Buddy Fight "fixed" this (details below) by introducing monster sizes: 0, 1, 2, & 3. You have three monster slots, and the max size allowed is 3. Obviously, the bigger the monster, the stronger it is, so balance was maintained. Placing a monster in the center meant you couldn't attack, but you couldn't get hit either. It feels constrictive, but honestly, it works to its advantage—you have to be creative within the constraints. It also ensured that one player couldn't run away with the game. Enough about the pros; I'll discuss some of the faults next.
+Buddy Fight "fixed" this (details below) by introducing monster sizes: 0, 1, 2, & 3. You have three monster slots, and the max size allowed is 3. Obviously, the bigger the monster, the stronger it is, so balance was maintained. Placing a monster in the center meant you couldn't attack, but you couldn't get hit either. It feels constrictive, but honestly, it works to its advantage,you have to be creative within the constraints. It also ensured that one player couldn't run away with the game. Enough about the pros; I'll discuss some of the faults next.
 
 ### Tokens
 
@@ -96,21 +96,21 @@ Buddy Fight also solved the issues of tracking damage and counters. In Magic, yo
 
 ### Buddies
 
-For a game called Buddy Fight, I'm listing buddies as a con? Yes. The game and anime hyped up the idea—it was you and your buddy against the world. So, what benefit does granting a monster the "buddy" title give?  
+For a game called Buddy Fight, I'm listing buddies as a con? Yes. The game and anime hyped up the idea,it was you and your buddy against the world. So, what benefit does granting a monster the "buddy" title give?  
 The first time you play it, you gain 1 life.  
 That’s it. For a game called **Buddy Fight**, there was no real advantage to choosing your favorite card as a buddy. It boiled down to picking the cheapest, smallest size card you have four copies of to get the 1 life bonus as soon as possible, and then the buddy goes back to being nothing.  
 Granted, some house rules fix this (similar to calling out Commander with a limit of 4 times), but still.
 
 ### Impacts
 
-For all the good mechanics Buddy Fight had, it also had impacts. This was cool in the anime—a cool, over-the-top finishing move. BUT in practice, or even after thinking about it for more than three seconds, it was such bs. Imagine losing 50–60% of your health, and then I just announce "final phase, eat trash," and you instantly lose.  
+For all the good mechanics Buddy Fight had, it also had impacts. This was cool in the anime,a cool, over-the-top finishing move. BUT in practice, or even after thinking about it for more than three seconds, it was such bs. Imagine losing 50–60% of your health, and then I just announce "final phase, eat trash," and you instantly lose.  
 It ended games quickly. They tried to fix it by adding shields, but that kind of ruined the whole point of an impact. They also added impact monsters so that it wasn’t just a finishing move, but an extra call and attack phase. Overall, though, it still felt like a problematic mechanic.
 
 ### Power Creep
 
 This game's power creep was insane. Between every new season of the anime, they introduced cards that made previous sets completely worthless. You have 10 health, but in a new set, there’s a flag that lets you have 20 health, and in the newest one, you can use monsters up to size 99!  
-Power creep in any card game is normal—I don’t even think you can avoid it, and it helps keep the game interesting and dynamic. Otherwise, you’d just stick with one deck for the rest of your life. BUT it has to be a small, not a HUGE LEAP. Buddy Fight had crazy power creep. It lasted six years, and essentially, all the cards from Season 1 and Season 2 won’t have a chance to win against the latest cards.  
-If you search up the "reborn" cards (aka remade old cards balanced against the new ones), the power difference is insane—it’s not even funny.
+Power creep in any card game is normal,I don’t even think you can avoid it, and it helps keep the game interesting and dynamic. Otherwise, you’d just stick with one deck for the rest of your life. BUT it has to be a small, not a HUGE LEAP. Buddy Fight had crazy power creep. It lasted six years, and essentially, all the cards from Season 1 and Season 2 won’t have a chance to win against the latest cards.  
+If you search up the "reborn" cards (aka remade old cards balanced against the new ones), the power difference is insane,it’s not even funny.
 
 ### Overdrive
 
@@ -118,11 +118,11 @@ I dislike one-time overpowered abilities per turn, and Buddy Fight, man, they ki
 
 ### Flags
 
-Flags limited you instead of allowing creativity. Granted, they understood this and fixed it with future flags and omni lords, but you know—it was just an add-on solution.
+Flags limited you instead of allowing creativity. Granted, they understood this and fixed it with future flags and omni lords, but you know,it was just an add-on solution.
 
 # Pokémon TCG
 
-All of us had Pokémon cards at one point in our lives—even if we hated card games, they were everywhere.
+All of us had Pokémon cards at one point in our lives,even if we hated card games, they were everywhere.
 
 ## Pros
 
@@ -136,7 +136,7 @@ It’s really impressive how they managed to incorporate all aspects of the Pok�
 
 ### Winning
 
-I love the prize cards mechanic as a substitute for health. I also love card draw—it rewards attacking.
+I love the prize cards mechanic as a substitute for health. I also love card draw,it rewards attacking.
 
 ## Cons
 
@@ -146,7 +146,7 @@ It’s way worse than in any of the other games here. You basically cannot play 
 
 ### Downtime
 
-Similar to the Pokémon video game, it’s turn-based. There is no reactive play—you play your cards, attack, and then wait for your opponent’s turn. In evenly matched games, these turns can take forever, and during that time, you’re just sitting and waiting for your opponent to attack. Aside from a handful of cards, there isn’t much you can do.
+Similar to the Pokémon video game, it’s turn-based. There is no reactive play,you play your cards, attack, and then wait for your opponent’s turn. In evenly matched games, these turns can take forever, and during that time, you’re just sitting and waiting for your opponent to attack. Aside from a handful of cards, there isn’t much you can do.
 
 ### VAstra
 
@@ -160,7 +160,7 @@ Played this very recently and man, it's pretty solid, fast fun. It was also part
 
 ### Plays like chess
 
-Each move feels intentional, like in chess—one move and then it's your opponent's turn. Every time I make a move, I have to pick, attack, or play a new creature.
+Each move feels intentional, like in chess,one move and then it's your opponent's turn. Every time I make a move, I have to pick, attack, or play a new creature.
 
 ### The Mind Bug
 
@@ -168,7 +168,7 @@ This is where it gets crazy fun. Both players have two tokens they can use anyti
 
 ### No bad cards
 
-Yup, I couldn't believe it. There are some mid cards, but every card has a use—it’s not like, "Dang, I got a bad hand," more like, "Okay, decent hand.".
+Yup, I couldn't believe it. There are some mid cards, but every card has a use,it’s not like, "Dang, I got a bad hand," more like, "Okay, decent hand.".
 Each card has it's use, not a single objectively bad card.
 With the mind bug, it doesn't matter since you steal your opponent's card anyway.
 
@@ -176,7 +176,7 @@ With the mind bug, it doesn't matter since you steal your opponent's card anyway
 
 ### No Deck Building
 
-I like building a deck; here, I'm at the mercy of the cards. Granted, none of them are bad, but it kind of takes away a big part of what makes card games fun for me—the personalization to my playstyle.
+I like building a deck; here, I'm at the mercy of the cards. Granted, none of them are bad, but it kind of takes away a big part of what makes card games fun for me,the personalization to my playstyle.
 
 ### Too easy
 
@@ -187,10 +187,10 @@ It feels a bit too easy, especially if you have a bit of a chess background. The
 So, what was the point of all this? It was to do a deep dive into the aspects I love the most about card games and to create the best card game possible:
 
 - **Affordable Alternatives:** Every card has an affordable counterpart to prevent "paywalls" from deck building.
-  1. Additionally, there will be collectible variants of the cards that are far more aesthetically pleasing. That way, collectors can enjoy collecting (or playing) all the pretty, shiny, foil variations. This is where the scarcity will be—you can buy all the cards, but collecting every variant will be expensive.
-- **Minimize Extras:** Minimize tokens, dice, and lands. I want it to be a deck builder and battler—you bring your deck, and that’s it. No need to dedicate 20% of your deck to lands or bring 10 different dice to keep track of life.
+  1. Additionally, there will be collectible variants of the cards that are far more aesthetically pleasing. That way, collectors can enjoy collecting (or playing) all the pretty, shiny, foil variations. This is where the scarcity will be,you can buy all the cards, but collecting every variant will be expensive.
+- **Minimize Extras:** Minimize tokens, dice, and lands. I want it to be a deck builder and battler,you bring your deck, and that’s it. No need to dedicate 20% of your deck to lands or bring 10 different dice to keep track of life.
 - **Simple to Play, Hard to Master:** I want there to be the big synergies and engine plays that Magic has, but not so complex that the average person feels intimidated. At the same time, it shouldn’t be so simple or based purely on chance that it lacks strategic depth.
 - **Modular System:** A base rule/engine for 1v1 that can easily be modified or adjusted for variations, such as 2v2, free-for-all, capture the point, etc.
-- **Flexible Colors:** No closed-off colors—players should be able to mix and match cards freely to find a playstyle just for them.
+- **Flexible Colors:** No closed-off colors,players should be able to mix and match cards freely to find a playstyle just for them.
 
 Is this gonna be made any time soon? No lmao.

@@ -31,7 +31,7 @@ code {
 	background-color: var(--card-bg);
 	border-radius: 12px;
 	border: 1px solid var(--card-border);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 	padding: 20px;
 	text-align: center;
 }

@@ -1,0 +1,1255 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tomas Martinez's Blog">
+      
+      
+        <meta name="author" content="Tomás Martinez">
+      
+      
+        <link rel="canonical" href="https://blog.tomasmartinez.xyz/blog/2026/03/16/beabetterfriendapp/">
+      
+      
+        <link rel="prev" href="../../../../2025/08/16/unix-cheat-sheet/">
+      
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>BeABetterFriend.app - Tomas Martinez Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#beabetterfriendapp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Tomas Martinez Blog" class="md-header__button md-logo" aria-label="Tomas Martinez Blog" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tomas Martinez Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BeABetterFriend.app
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4s-8.6-18.3-18.5-20.5C294.4 2.2 275.4 0 256 0"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M178.2-10.1c7.4-3.1 15.8-2.2 22.5 2.2l87.8 58.2 87.8-58.2c6.7-4.4 15.1-5.2 22.5-2.2S411.4-.5 413 7.3l20.9 103.2 103.2 20.9c7.8 1.6 14.4 7 17.4 14.3s2.2 15.8-2.2 22.5L494.1 256l58.2 87.8c4.4 6.7 5.2 15.1 2.2 22.5s-9.6 12.8-17.4 14.3l-103.3 20.8L413 504.7c-1.6 7.8-7 14.4-14.3 17.4s-15.8 2.2-22.5-2.2l-87.8-58.2-87.8 58.2c-6.7 4.4-15.1 5.2-22.5 2.2s-12.8-9.6-14.3-17.4L143 401.4 39.7 380.5c-7.8-1.6-14.4-7-17.4-14.3s-2.2-15.8 2.2-22.5L82.7 256l-58.2-87.8c-4.4-6.7-5.2-15.1-2.2-22.5s9.6-12.8 17.4-14.3L143 110.6 163.9 7.3c1.6-7.8 7-14.4 14.3-17.4M207.6 256a80.4 80.4 0 1 1 160.8 0 80.4 80.4 0 1 1-160.8 0m208.8 0a128.4 128.4 0 1 0-256.8 0 128.4 128.4 0 1 0 256.8 0"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shadow1363/blog.tomasmartinez.xyz" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog.tomasmartinez.xyz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Tomas Martinez Blog" class="md-nav__button md-logo" aria-label="Tomas Martinez Blog" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.png" alt="logo">
+
+    </a>
+    Tomas Martinez Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shadow1363/blog.tomasmartinez.xyz" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog.tomasmartinez.xyz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Why
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The How
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The How">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Logo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Mac
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procrastination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procrastination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Translations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File loading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-other-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The other stuff
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrospective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrospective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Future
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/shadow1363.png" alt="Tomás Martinez">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://tomasmartinez.xyz">Tomás Martinez</a>
+                        
+                      </strong>
+                      <br>
+                      Named after the site
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-03-16 00:00:00+00:00" class="md-ellipsis">March 16, 2026</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2026-03-16 00:00:00+00:00" class="md-ellipsis">March 16, 2026</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/tech/">Tech</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              7 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">app</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">dev</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="beabetterfriendapp">BeABetterFriend.app</h1>
+<p>it's finally here! <a href="https://beabetterfriend.app">Be A Better Friend the App</a>.</p>
+<!-- more -->
+
+<p>Completed &amp; available for both iOS &amp; Android, free and private.</p>
+<p>Thought i'd share a little bit of why &amp; how it was made.</p>
+<h2 id="the-why">The Why</h2>
+<p>The main problem arose from not having all my friend's information in one neat place and how I forget my friend's birthday all the damn time.</p>
+<p>LIKE LOOK AT THIS, SHE MADE ME THIS FOR MY BIRTHDAY and what did I get her?</p>
+<p><img alt="Super duper cool birthday gift" src="../../../../image/betterfriend/tombday1.png" /></p>
+<p>Nothing. I forgot 💀</p>
+<p>Yeah I wasn't joking in the <a href="https://linkedin link">confession</a></p>
+<p>So originally I started using an Obsidian Template (Which didn't work anymore since I moved to VS Codium) and plain old <code>.md</code> files. It worked but it was stuck to my pc, it didn't have the portability. It also depends on me checking my notes, I thought why couldn't it just have been automatic, I get a notification when my friend's birthday is near?</p>
+<p>So I came up with an idea for an app, mind you I have never developed an app.</p>
+<p>My only experience with coding is JavaScript &amp; Python, with some knowledge of Lua, GodotScript &amp; C. I soon found out about Capacitor from Ionic which allows me to use my own framework (none, in my case) and creates a web/app for both android, ios and web.</p>
+<h2 id="the-how">The How</h2>
+<p>So yeah the tech stack is:</p>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>Capacitor</li>
+<li>SQLite3</li>
+</ul>
+<p>Yup all plain, no frameworks or anything fancy.
+Should have definitely used one...</p>
+<p>If I made the app in one day, sure but oh boy maintaining pure JS is really something.</p>
+<h3 id="the-logo">The Logo</h3>
+<p>As I was making the app, I got the name Better Friend. Kinda on point but after searching and seeing no apps with that name and some domains free'd up for it, I thought why not?</p>
+<p>As for the logo I always had an idea of what I wanted it to be, like a clover, or a group of friend's hugging. And purple, I don't really know how to explain it but the logo and color, I was already dead set on what I wanted. Purple felt like a really neutral color and new, didn't want to step on other apps toes (youtube red, amazon prime blue, etc)</p>
+<p>I got my mom to work off some very isometrical doodles I made and she made the end result. It was perfect, 4 hearts with the space touching removed. And then it kind of stuck. Purple, 4 and the clover. I really like it.</p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<p><svg width="100%" height="100%" viewBox="0 0 2700 2700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path d="M817.508,1888.88C626.348,1966.38 446.602,1951.74 350.116,1844.97C238.302,1721.23 238.302,1473.75 461.93,1350.02C238.302,1226.28 238.302,978.803 350.116,855.064C446.602,748.284 626.349,733.647 817.509,811.151C829.821,841.518 844.457,872.173 861.419,902.828C948.018,1070.51 1170.67,1238.2 1356.25,1350.01C1170.67,1461.83 948.018,1629.51 861.419,1797.2C844.457,1827.86 829.82,1858.51 817.508,1888.88ZM817.509,811.151C740.007,619.991 754.644,440.244 861.419,343.757C985.158,231.943 1232.63,231.943 1356.37,455.571C1480.11,231.943 1727.58,231.943 1851.32,343.757C1958.1,440.244 1972.74,619.991 1895.24,811.152C1864.87,823.464 1834.21,838.101 1803.56,855.064C1635.87,941.663 1468.19,1164.31 1356.37,1349.9C1244.56,1164.31 1076.87,941.663 909.187,855.064C878.532,838.101 847.876,823.463 817.509,811.151ZM1895.24,1888.88C1882.92,1858.51 1868.29,1827.86 1851.32,1797.2C1764.72,1629.51 1542.07,1461.83 1356.49,1350.01C1542.07,1238.2 1764.72,1070.51 1851.32,902.828C1868.29,872.174 1882.92,841.519 1895.24,811.152C2086.4,733.647 2266.14,748.284 2362.63,855.064C2474.44,978.803 2474.44,1226.28 2250.82,1350.02C2474.44,1473.75 2474.44,1721.23 2362.63,1844.97C2266.14,1951.74 2086.4,1966.38 1895.24,1888.88ZM817.508,1888.88C847.876,1876.57 878.532,1861.93 909.187,1844.97C1076.87,1758.37 1244.56,1535.72 1356.37,1350.13C1468.19,1535.72 1635.87,1758.37 1803.56,1844.97C1834.21,1861.93 1864.87,1876.57 1895.24,1888.88C1972.74,2080.04 1958.1,2259.78 1851.32,2356.27C1727.58,2468.09 1480.11,2468.09 1356.37,2244.46C1232.63,2468.09 985.158,2468.09 861.419,2356.27C754.644,2259.78 740.007,2080.04 817.508,1888.88ZM1356.37,1349.9C1356.39,1349.92 1356.4,1349.95 1356.42,1349.97C1356.4,1349.96 1356.39,1349.95 1356.37,1349.94C1356.36,1349.95 1356.35,1349.96 1356.33,1349.97C1356.35,1349.94 1356.36,1349.92 1356.37,1349.9ZM1356.33,1349.97C1356.32,1349.98 1356.31,1350 1356.3,1350.02C1356.31,1350.03 1356.32,1350.05 1356.33,1350.06C1356.3,1350.04 1356.28,1350.03 1356.25,1350.01C1356.28,1350 1356.31,1349.98 1356.33,1349.97ZM1356.33,1350.06C1356.34,1350.07 1356.36,1350.08 1356.37,1350.09C1356.39,1350.08 1356.4,1350.07 1356.42,1350.06C1356.4,1350.08 1356.39,1350.11 1356.37,1350.13C1356.36,1350.11 1356.34,1350.08 1356.33,1350.06ZM1356.49,1350.01C1356.47,1350.03 1356.44,1350.04 1356.42,1350.06C1356.43,1350.04 1356.44,1350.03 1356.44,1350.02C1356.43,1350 1356.43,1349.99 1356.42,1349.97C1356.44,1349.99 1356.46,1350 1356.49,1350.01Z" style="fill:rgb(153,51,204);"/>
+</svg></p>
+<h2 id="developing">Developing</h2>
+<p>As for developing it was long process, mainly because</p>
+<h3 id="getting-a-mac">Getting a Mac</h3>
+<p>So after reaching a point, I realized I needed a macOS device that runs the latest version, so I can test and publish the app.
+The problem is the oldest mac we had was 2012, which was several versions behind. After researching and going around used selling groups, the best thing I found was a 2013 MacBook which again couldn't even run the latest version. Time was running out, I had a couple of colleagues I could borrow their Mac but none of them are programmers so I'd have to download XCode, Node, etc and probably would have to use it multiple times, which could be inconvenient since they all use it for work.</p>
+<p>I even considered telling my friend from over sees to bring me one, the problem is it would be way out of budget.
+So I was even considering giving up, swapping to MacInCloud or something similar. Then it happened, my Dad searched on Magalu and out of nowhere, there was an officially sold by Magalu, brand new and not sold by a stranger, for 2500 reais (Literally the price of some used 2012 Macs people were selling). It was the perfect version to, a 2018 Mac, i3 with 8GB (Upgradable), anyways we bought it asap. Two days later it showed up, and after updating it it ran the version Sequoia, it worked.
+Then for curiosity I checked the Magalu store again, to see if it was still in stock. And it was, but the price went back up to almost 7k reais.</p>
+<p>It really was a miracle.</p>
+<p>Then I became a shill for mac and sold my gaming laptop for a M2 on black friday.</p>
+<p>macOS is genuinely really good, it just works and required so much less debloating to make windows actually usable. Another blog idea, my favorite macOS extensions, just gotta write it. 😩</p>
+<h3 id="procrastination">Procrastination</h3>
+<p>Then I procrastinated for almost a year.</p>
+<p>Mainly had a lot going on my life, specially with work. Didn't wanna code after spending the day coding hahaha.</p>
+<p>And I don't know but I lost motivation, mostly felt kinda dumb for making it? I don't know how to explain it, like it was gonna flop. Even I stopped using my OWN app, how crazy is that?</p>
+<p>The project got in a weird state where I didn't really update it. It had a lot of really horrible bugs that I couldn't find out how to fix, but in retrospect I hadn't really given it my all to fix it.</p>
+<p>What got me out of that trance was working on the site and consistency.</p>
+<p>And I also realized it would be so much worse if I got so close and didn't release than release later than never or someone else did my idea.</p>
+<h3 id="site">Site</h3>
+<p>Instead of working on the app, I procrastinated on the site which has a much nicer tech stack, NextJS, TailWind CSS &amp; <a href="https://reactbits.dev">React Bits</a>, and it was awesome.</p>
+<p>I really didn't get the whole hype but wow it's so much easier to edit in the long term, like just swap the pre made blocks or tweak a bit of the code. Especially the swap from the site <strong>not live</strong> to being <strong>live</strong>, was so great. Just swapped a couple of componentes, bada bing bada boom.</p>
+<p>BUT THERE WAS A PROBLEM.</p>
+<p>HOW ON EARTH DO YOU SELF HOST REACT WITHOUT PORT FORWARDING?</p>
+<p>HTML/JS is just a file so it's much easier, my NextJS I made it so it's a server. What I did instead of paying a measly 10 dollars a month was, I self hosted Coolify + Cloudflare on my old gaming laptop. I love this little set up so much (Still need to fix my current fix of redirecting, the url is new.beabetterfriend.app and not beabetterfriend.app)</p>
+<p>Take that tech overlords, i'll publish a guide on how to do that eventually. It's a great experience and honestly can't wait to use it for more projects. It was a small pain to set up but man i've been testing and playing around with it, so awesome.</p>
+<h3 id="testing">Testing</h3>
+<p>Gotta say huge shoutout to all my friends who helped test the app and downloaded it, just the fact someone sent me a message asking hey tom, where's my app? or dude that's such a good idea.</p>
+<p>it really made my day in such an unimaginable way, it really felt like what I was doing had impact. I think like 4 of them know I have a blog hahaha, thanks guys!</p>
+<h2 id="challenges">Challenges</h2>
+<h3 id="translations">Translations</h3>
+<p>I want the app to be for everyone, that's why having support for multiple languages is such a fundamental feature.</p>
+<p>The problem is I only know 3, what about the rest? I could get friends to help me out but the way I currently have it implemented needs to be improved. So I create a repo inside a repo, that way the repo inside is public so it's super easy for anyone to add languages (super easy if you know github. May make a nice front end for this soon).</p>
+<p>Check it out <a href="https://github.com/Shadow1363/betterfriend-translations">here</a> and would love it if you could contribute!</p>
+<h3 id="file-loading">File loading</h3>
+<p>So for some reason the way files are loaded is pretty weird in Capacitor, not sure if it's just for it or all apps. But basically the issue is that trying to load a file after the app is running, a <code>.json</code> or <code>.svg</code>. The path would be wrong so what was the solution? Just make all the files <code>.js</code> and preload them.</p>
+<p>Yeah I don't know if it's "optimal" but hey it works, really simple solution.</p>
+<h3 id="the-other-stuff">The other stuff</h3>
+<p>Making an App is half the battle, what about the designs, marketing and videos? I could make a ok video but nothing too crazy, luckily one of my friends was down to help me in video editing. It was a little rough the first time, but learning from it and experiences from my work, I think the next few videos will come out better.</p>
+<p>As for graphics, it was my Mom again that helped me &amp; Mockuuups Studio, I gave her a few examples of what I had and she made some great work. I really like how the last image of the app on the stores, it's just people because that's what the app is, it's a helper not a replacement. The gradient was a nice touch too.</p>
+<p><img alt="really cool image of showing friends instead of app photos" src="../../../../image/betterfriend/iPad5.png" /></p>
+<h2 id="retrospective">Retrospective</h2>
+<p>Definitely embarrassed with how long it took me to get this out, almost a full year for a simple offline app (ffs) but i'm still quite happy for the journey, all the ups and downs. How much I grew coding wise, Glad I managed to release the app before apple charged me another year too, yikes I get it why every extension is paid now on macOS.</p>
+<p>Overall a lot of money was spent, I rather not think about it 😭 but hey at least I can brag i'm an app developer.</p>
+<h2 id="the-future">The Future</h2>
+<p>I do want to keep updating the app, already got some bugs that need ironing out &amp; features to add.</p>
+<p>Oh yeah and WIDGETS! LIKE HOW DID I NOT THINK ABOUT THIS EARLIER FUC-</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+<script
+  src="https://giscus.app/client.js"
+  data-repo="shadow1363/blog.tomasmartinez.xyz"
+  data-repo-id="R_kgDOOF8EUw"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOOF8EU84CnxJq"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../../2025/08/16/unix-cheat-sheet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unix Cheat Sheet">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Unix Cheat Sheet
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/shadow1363" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/tomas--martinez" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.imdb.com/name/nm15119198/" target="_blank" rel="noopener" title="www.imdb.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M89.5 323.6H53.9V186.2h35.6zm66.6-73.1 9.1-64.3h46.3v137.4h-31v-92.7l-13.4 92.7h-21.3l-13-90.7-.1 90.7h-31.2V186.2h46.1c.5 8.3 2.8 18.1 4.3 29.4zm67.6 73.1V186.2h26.6c17 0 27 .9 33 2.4 6.1 1.7 10.7 4.2 13.9 7.9 3.1 3.3 5.1 6.6 5.8 12 .9 4.4 1.4 13.1 1.4 26.2v48.2c0 12.3-.7 20.5-1.9 24.7-1.1 4.1-3.1 7.4-6 9.7-2.8 2.4-6.4 4.1-10.7 5-4.2.8-10.6 1.3-19.1 1.3zm35.5-113.9v89.4c5.1 0 8.3-1 9.4-2.3 1.1-2 1.8-7.6 1.8-16.7v-53.3c0-6.2-.1-10.2-.7-12-.3-1.8-1.2-3-2.6-4.7-1.4 0-4.1-.4-7.9-.4m57.3 113.9V186.2h34.1v43.9c2.9-2.4 6.1-4.9 9.5-6.6 3.6-1.5 8.8-2.4 12.8-2.4 4.8 0 8.9.8 12.3 2.2 3.4 1.5 6 3.5 8 6.2 1.7 2.6 2.7 5.3 3.1 7.8.4 2.6-.2 8-.2 16.2v38.6c0 8.2.2 14.3-.8 18.4-1.1 4-3.8 7.6-7.8 9.6-4.1 3.9-8.9 5.3-14.6 5.3-4 0-9.2-.9-12.7-2.5-3.5-1.8-6.7-4.5-9.6-8l-2.1 8.7zm45.1-20.7c.7-1.8 1-6 1-12.5V255c0-5.6-.3-9.5-1.1-11.2-.7-1.9-3.7-2.7-5.8-2.7-2 0-3.4.8-4.1 2.3-.6 1.5-1 5.4-1 11.6v36.4c0 6.1.4 10 1.2 11.6.6 1.7 2.1 2.5 4.1 2.5 2.2 0 4.2-.8 5.7-2.6M418.4 32c15.7 1.2 28.7 15.2 28.7 31.9v384.2c0 16.4-11.9 30.4-28.2 31-.3 0-.5.9-.8.9H29.9c-.3 0-.6-.9-.8-.1-15.7-1.4-27.9-13.8-29-30.2L0 61.8c1.1-15.9 13.8-28.7 30.3-30.7h387.4c.2 0 .5.9.7.9M30.3 41.3C19 42 10 51 9.3 62.4v387.3c.4 5.4 2.7 10.5 6.4 14.3 3.8 3.9 8.8 6.3 14.2 6.7h388.2c11.5-1 20.6-11.6 20.6-22.6V63.9c0-5.7-2.1-11.3-6-15.5s-9.3-6.8-15-7.2H30.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.top", "navigation.footer", "search.suggest", "search.share"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/giscus-theme.js"></script>
+      
+    
+  </body>
+</html>
