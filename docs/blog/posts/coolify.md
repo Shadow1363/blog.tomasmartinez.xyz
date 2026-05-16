@@ -10,7 +10,7 @@ tags:
 date:
   created: 2026-05-14
   updated: 2025-12-14
-draft: true
+draft: false
 comments: true
 ---
 
