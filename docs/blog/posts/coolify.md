@@ -106,3 +106,5 @@ Abaixo mostro como fazer o redirecionamento de portas usando o roteador da Vivo.
 
 - [Proxmox Community Scripts](https://community-scripts.org/scripts)
 - [Domínios](https://registro.br/)
+- [Site sendo hospedado com Wii](https://blog.infected.systems/posts/2025-04-21-this-blog-is-hosted-on-a-nintendo-wii/)
+- [Coolify Template NextJS](https://github.com/Shadow1363/nextjs-template)
