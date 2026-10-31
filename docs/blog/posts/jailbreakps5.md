@@ -36,11 +36,11 @@ Jogar não tem limites.
 - Usar aplicativos homebrew (feitos pela comunidade)
 - Jogar online\*
 
-\* Só em jogos que rodam via emulador ou via Steam, não em jogos de PS4/PS5.
+\* Só em jogos que rodam via emulador ou via Steam, suporte para ps4/ps5 está chegando!
 
 ## O que você **não** consegue fazer
 
-- Jogar jogos de PS4/PS5 online
+- Jogar jogos de PS4/PS5 online (O pessoal está indo atras, ja tem servidor para [Gran Turismo 7](https://theghostonline.dev/))
 - Usar os serviços da Sony (PlayStation Store, PlayStation Network)
 
 ## Minha conta pode ser banida? Dá para voltar atrás?
